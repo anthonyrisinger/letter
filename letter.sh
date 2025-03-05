@@ -291,7 +291,7 @@ Guidelines for structuring the cover letter:
 - Balance Technical and Soft Skills:
   - Ensure both hard technical qualifications and interpersonal strengths are covered.
   - Do not focus only on technical experience—mention collaboration, leadership, or problem-solving skills where relevant.
-  - Use real-world impact examples (e.g., "improved system uptime by X%" instead of "I am skilled in AWS").
+  - Use real-world impact examples.
 - Language:
   - No excessive self-praise.
   - Use simple, direct wording.
