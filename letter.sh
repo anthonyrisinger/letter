@@ -154,6 +154,7 @@ IMPORTANT: Before EVERY response—specifically, before the first token—you mu
 - Reflect on your anticipated result but DO NOT share this version.
 - Refine it instead; assert truthfulness and correctness per instructions.
 - Avoid excessive, superfluous, extraneous, or self-aggrandizing language.
+- PROMPT is GENERATED! EXIT ASAP when bad, barren, broken, or incoherent!
 EOF
 }
 
@@ -534,16 +535,20 @@ function check:deps() {
 #        ./letter.sh merge.pdf resume.pdf
 #        ./letter.sh cover.pdf resume.pdf [...] merge.pdf
 function main() {
+    check:deps "$@"
+    mkdir -p "$LETTER_TMP"
+
     local output=${1-}
     local extras=( "${@:2}" )
     local inputs=( $(
         shopt -s nullglob
-        printf '%s\n' "$LETTER_CTX"/*.{md,txt}
+        for x in "$LETTER_CTX"/*.{md,txt}; do
+            [[ ${x##*/} == "app.txt" ]] \
+            && cp "$x" "$LETTER_TMP" \
+            || echo "$x"
+        done
     ) )
 
-    check:deps "$@"
-
-    mkdir -p "$LETTER_TMP"
     if [[ -t 0 ]]; then
         echo -n "paste job posting... " >&2
         if command -v pbpaste &> /dev/null; then
@@ -572,7 +577,7 @@ function main() {
     echo "resolving CONTEXT_AT to $CONTEXT_AT" >&2
 
     mkdir -p "$CONTEXT_AT"
-    mv "$LETTER_TMP/ctx.txt" "$CONTEXT_AT"
+    mv "$LETTER_TMP"/*.txt "$CONTEXT_AT"
 
     echo -n "genai job details... " >&2
     extract:job > "$CONTEXT_AT/job.txt" < "$CONTEXT_AT/ctx.txt"
@@ -584,9 +589,13 @@ function main() {
     fi
 
     echo -n "genai app details... " >&2
-    extract:app > "$CONTEXT_AT/app.txt" < "${inputs[0]}" "${inputs[@]:1}"
+    local cached=" ($LETTER_CTX/app.txt)"
+    if [[ ! -s "$CONTEXT_AT/app.txt" ]]; then
+        cached=
+        extract:app > "$CONTEXT_AT/app.txt" < "${inputs[0]}" "${inputs[@]:1}"
+    fi
     tr ',;' '\n\n' < "$CONTEXT_AT/app.txt" | wc -l | tr -d '[:space:]' >&2
-    echo " at $CONTEXT_AT/app.txt" >&2
+    echo " at $CONTEXT_AT/app.txt$cached" >&2
     if [[ ! -s "$CONTEXT_AT/app.txt" ]]; then
         echo "error: empty context: $CONTEXT_AT/app.txt" >&2
         exit 1

@@ -167,6 +167,7 @@ export LETTER_MODEL="deepseek-r1:32B"
 - **Resume Optimization**: Structure your resume with clear technology lists and quantifiable achievements
 - **Multiple Resumes**: Use different resume files for different job types by specifying the resume path
 - **Support docs**: Add supplementary `*.txt` files alongside `resume.md` to include ad hoc context
+- **Skip Extraction**: Copy previously-generated `app.txt` files alongside your `resume.md` to skip re-extracting resume details.
 - **Logging**: Enable verbose logs with `export LETTER_LOG="/dev/stderr"`
 
 ## Limitations and Considerations
