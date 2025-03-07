@@ -158,7 +158,7 @@ The script offers several customization options through environment variables:
 
 For higher quality (but slower) results, use the 32B model:
 ```bash
-export LETTER_MODEL="deepseek-r1:32B"
+export LETTER_MODEL="qwq:32b"
 ```
 
 ## Advanced Tips
