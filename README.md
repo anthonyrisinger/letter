@@ -137,7 +137,7 @@ Sincerely,
 ### C Anthony Risinger
 ```
 
-Everything it produced is accurate enough to ship. Although the phrasing "leading global engineering teams" is mildly misleading because I was never a _people_ manager, since I was a technical lead in both title and spirit on multiple occasions across multiple time zones—management proper but on the technical track—it's still 100% accurrate.
+Everything it produced is accurate enough to ship. Although the phrasing "leading global engineering teams" is mildly misleading because I was never a _people_ manager, since I was a technical lead in both title and spirit on multiple occasions across multiple time zones—management proper but on the technical track—it's still 100% accurate.
 
 ## How It Works
 
