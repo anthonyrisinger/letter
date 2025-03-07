@@ -170,7 +170,7 @@ EOF
 #
 # Behavior:
 #   - Without arguments: Uses basic extraction prompt
-#   - With arguments: Creates double-quoted (>>) context structure from files
+#   - With arguments: Creates hierarchical context structure from files
 #
 # Usage: Pipe output to generate() to extract structured applicant data
 function prompt:extract:app() {
@@ -190,7 +190,7 @@ $(
     i=$#
     for x in "$@"; do
         gt=$(printf '>%.0s' $(seq $i))
-        printf '\n%s\n\n' "${x#*/}"
+        printf '\n%s\n\n' "${x##*/}"
         sed "s,^,>$gt ," "$x"
         ((i--))
     done
@@ -305,7 +305,7 @@ $(
     i=$#
     for x in "$@"; do
         gt=$(printf '>%.0s' $(seq $i))
-        printf '\n%s\n\n' "${x#*/}"
+        printf '\n%s\n\n' "${x##*/}"
         sed "s,^,$gt ," "$x"
         ((i--))
     done
