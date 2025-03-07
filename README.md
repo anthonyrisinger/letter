@@ -89,39 +89,32 @@ Combine multiple documents into a single PDF:
 
 ## Example
 
-### Input: Job Posting (excerpt)
+Unmodified output using `t/discord.txt` and my own resume:
+
 ```
-Software Engineer - Backend
-XYZ Tech
+$ LETTER_MODEL=qwq ./letter.sh < t/discord.txt
+stdin job posting... ok
+resolving CONTEXT_ID to 42b19ae1
+resolving CONTEXT_TS to 20250307T211921Z
+resolving CONTEXT_AT to letter/42b19ae1/20250307T211921Z
+genai job details... 53 at letter/42b19ae1/20250307T211921Z/job.txt
+genai app details... 95 at letter/42b19ae1/20250307T211921Z/app.txt
+genai cov details... ok at letter/42b19ae1/20250307T211921Z/cov.txt
+---
+# Dear Hiring Manager at Discord,
 
-We're looking for a skilled backend engineer with 5+ years of experience in
-distributed systems. Proficiency in Golang and Kubernetes required. Experience
-with cloud infrastructure and CI/CD pipelines preferred.
+My 19 years of hands-on experience in designing scalable systems, optimizing distributed infrastructure, and leading global engineering teams directly align with your need for a Staff Software Engineer capable of driving petabyte-scale media creation. I’ve delivered measurable performance gains—like reducing latency by 50% through AWS Global Accelerator and custom libc preloading—and architected Kubernetes-based environments managing over 12 clusters, ensuring high-impact technical outcomes at scale. My cross-functional leadership across cybersecurity, VR gaming, and enterprise systems positions me to thrive in Discord’s collaborative environment while addressing complex media delivery challenges like yours.
 
-Our team is responsible for ...
+I bring deep expertise in cloud infrastructure (AWS/GCP), low-level system optimization (Linux kernel tuning), and CDN integration (Cloudflare) that directly map to your requirements for optimizing HLS/DASH streaming workflows and reducing operational costs. My recent work on spatial partitioning research and real-time VR server lifecycle management parallels the high-performance demands of gaming communication platforms, while my Rust adoption and Python proficiency ensure I can contribute immediately to media transcoding pipelines or codec optimizations. By integrating emerging technologies—such as GPU scheduling for ML-driven video processing—I aim to accelerate your team’s path toward next-generation media solutions.
 
-The ideal candidate has a strong background in system design, cares deeply about
-code quality, and has experience mentoring junior engineers.
+The opportunity to create at Discord excites me because of its unique role in shaping how millions interact through gaming and beyond. I’m eager to collaborate on refining media ingest/delivery performance, mentor engineers on cutting-edge infrastructure practices, and help scale systems that already move 100PB+ of user-generated content daily. Let’s build solutions that push the boundaries of what real-time communication platforms can achieve.
+
+Sincerely,
+
+### C Anthony Risinger
 ```
 
-### Output: Generated Cover Letter
-```markdown
-# Dear Hiring Manager at XYZ Tech,
-
-I'm excited to apply for the Backend Software Engineer position. With over 7 years
-developing distributed systems using Golang, I've designed and implemented scalable
-microservices architecture at ABC Systems that handles 15M+ daily requests. My
-experience deploying and maintaining Kubernetes clusters in production environments
-aligns perfectly with your technical requirements.
-
-At my current role ...
-
-I'm particularly drawn to XYZ Tech's mission of creating technology that makes a
-meaningful impact, and I'm excited about the opportunity to contribute to your
-team's success. Thank you for your time and consideration.
-
-### Jane Smith
-```
+Everything it produced is accurate enough to ship. Although the phrasing "leading global engineering teams" is mildly misleading because I was never a _people_ manager, since I was a technical lead in both title and spirit on multiple occasions across multiple time zones—management proper but on the technical track—it's still 100% accurrate.
 
 ## How It Works
 
