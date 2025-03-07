@@ -92,7 +92,7 @@ Combine multiple documents into a single PDF:
 Unmodified output using `t/discord.txt` and my own resume:
 
 ```
-$ LETTER_MODEL=qwq ./letter.sh < t/discord.txt
+$ LETTER_MODEL=qwq ./letter.sh < t/discord.txt | fold -s
 stdin job posting... ok
 resolving CONTEXT_ID to 42b19ae1
 resolving CONTEXT_TS to 20250307T211921Z
@@ -103,11 +103,34 @@ genai cov details... ok at letter/42b19ae1/20250307T211921Z/cov.txt
 ---
 # Dear Hiring Manager at Discord,
 
-My 19 years of hands-on experience in designing scalable systems, optimizing distributed infrastructure, and leading global engineering teams directly align with your need for a Staff Software Engineer capable of driving petabyte-scale media creation. I’ve delivered measurable performance gains—like reducing latency by 50% through AWS Global Accelerator and custom libc preloading—and architected Kubernetes-based environments managing over 12 clusters, ensuring high-impact technical outcomes at scale. My cross-functional leadership across cybersecurity, VR gaming, and enterprise systems positions me to thrive in Discord’s collaborative environment while addressing complex media delivery challenges like yours.
+My 19 years of hands-on experience in designing scalable systems, optimizing
+distributed infrastructure, and leading global engineering teams directly align
+with your need for a Staff Software Engineer capable of driving petabyte-scale
+media creation. I’ve delivered measurable performance gains—like reducing
+latency by 50% through AWS Global Accelerator and custom libc preloading—and
+architected Kubernetes-based environments managing over 12 clusters, ensuring
+high-impact technical outcomes at scale. My cross-functional leadership across
+cybersecurity, VR gaming, and enterprise systems positions me to thrive in
+Discord’s collaborative environment while addressing complex media delivery
+challenges like yours.
 
-I bring deep expertise in cloud infrastructure (AWS/GCP), low-level system optimization (Linux kernel tuning), and CDN integration (Cloudflare) that directly map to your requirements for optimizing HLS/DASH streaming workflows and reducing operational costs. My recent work on spatial partitioning research and real-time VR server lifecycle management parallels the high-performance demands of gaming communication platforms, while my Rust adoption and Python proficiency ensure I can contribute immediately to media transcoding pipelines or codec optimizations. By integrating emerging technologies—such as GPU scheduling for ML-driven video processing—I aim to accelerate your team’s path toward next-generation media solutions.
+I bring deep expertise in cloud infrastructure (AWS/GCP), low-level system
+optimization (Linux kernel tuning), and CDN integration (Cloudflare) that
+directly map to your requirements for optimizing HLS/DASH streaming workflows
+and reducing operational costs. My recent work on spatial partitioning research
+and real-time VR server lifecycle management parallels the high-performance
+demands of gaming communication platforms, while my Rust adoption and Python
+proficiency ensure I can contribute immediately to media transcoding pipelines
+or codec optimizations. By integrating emerging technologies—such as GPU
+scheduling for ML-driven video processing—I aim to accelerate your team’s path
+toward next-generation media solutions.
 
-The opportunity to create at Discord excites me because of its unique role in shaping how millions interact through gaming and beyond. I’m eager to collaborate on refining media ingest/delivery performance, mentor engineers on cutting-edge infrastructure practices, and help scale systems that already move 100PB+ of user-generated content daily. Let’s build solutions that push the boundaries of what real-time communication platforms can achieve.
+The opportunity to create at Discord excites me because of its unique role in
+shaping how millions interact through gaming and beyond. I’m eager to
+collaborate on refining media ingest/delivery performance, mentor engineers on
+cutting-edge infrastructure practices, and help scale systems that already move
+100PB+ of user-generated content daily. Let’s build solutions that push the
+boundaries of what real-time communication platforms can achieve.
 
 Sincerely,
 
