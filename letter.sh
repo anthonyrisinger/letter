@@ -56,8 +56,8 @@ set -euo pipefail
 # Min 24GB GPU (RTX 3090) num_ctx=8192
 # Higher quality but much slower model
 # : ${LETTER_MODEL:="deepseek-r1:32B"}
-# Less tested but often good quality
-# : ${LETTER_MODEL:="granite3.2:8B"}
+# Highest quality and faster than above
+# : ${LETTER_MODEL:="qwq:32B"}
 : ${LETTER_OPTIONS:='{"num_ctx":8192}'}
 
 JOB_KEYS=(

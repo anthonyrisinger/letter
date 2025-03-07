@@ -32,7 +32,7 @@ cp ~/resume.md letter/resume.md
 - **Base Dependencies**: curl, jq, sed, tee, tr
 - **PDF Output**: pandoc (optional, for PDF generation)
 - **PDF Merging**: pdfcpu (optional, for combining documents)
-- **LLM Model**: DeepSeek-R1 (8B or 32B version)
+- **LLM Model**: deepseek-r1:8b, deepseek-r1:32b, or qwq:32b (best)
 
 ## Installation
 
