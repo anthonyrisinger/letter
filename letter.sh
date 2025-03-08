@@ -466,7 +466,7 @@ function filter:words() {
     sed -ur \
             -e 's/[Gg]oLang/Golang/g' \
             -e 's/honed/refined/g' \
-            -e 's/innovat/originat/g' \
+            -e 's/innovat/progress/g' \
             -e 's/master/learn/g' \
             -e 's/obsess/dedicat/g'
 }
