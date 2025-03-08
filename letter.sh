@@ -249,6 +249,7 @@ IMPORTANT: Guided Analysis and Details Extraction
 - For experience parameters, extract both quantitative and qualitative aspects.
 - For impact records, prioritize measurable outcomes and concrete achievements.
 - Maintain factual accuracy without extrapolation beyond what is directly supported.
+- Seek concision, humility, confidence, and rigorously proper attribution.
 
 PROMPT: Update with your observations and respond with this EXACT STRICT VALID JSON format:
 
@@ -315,14 +316,14 @@ PROMPT: Ensure the closing statement is engaging and forward-looking:
 
 - Avoid generic phrases—instead, show initiative and interest.
 - Express enthusiasm about specific aspects of the role.
-- Keep it concise but impactful.
+- Keep it concise but impactful, fluid and natural.
 
 Final output must be fully resolved with NO placeholders:
 
 \`\`\`
 Dear Hiring Manager at {{${JOB_KEYS[0]/%Name/ Name}}},
 
-{{2-3 paragraphs MAX of personalized 'I' statements}}
+{{compact, minimalistic, high-impact, first-person POV truth statements}}
 
 Sincerely,
 
