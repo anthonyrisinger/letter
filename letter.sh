@@ -467,7 +467,7 @@ function filter:words() {
             -e 's/[Gg]oLang/Golang/g' \
             -e 's/honed/refined/g' \
             -e 's/innovat/progress/g' \
-            -e 's/master/learn/g' \
+            -e 's/master/learn/g;s/learny/savvy/g' \
             -e 's/obsess/dedicat/g'
 }
 
